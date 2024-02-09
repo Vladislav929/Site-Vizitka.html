@@ -1,0 +1,76 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #fff;
+}
+
+
+.ne_nado {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -10px;
+}
+
+.nenado {
+  position: absolute;
+  margin-top: -210px;
+  margin-left: -10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.ne_nado_button {
+  text-decoration: none;
+  width: 320px;
+  font-size: 23px;
+  color: #fff;
+}
+
+.ne_button {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background: linear-gradient(90deg, rgba(255,0,0,1) 100%, rgba(6,0,68,1) 100%);
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  font-size: 20px;
+  padding: 20px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+/* Стили для создания блика на кнопке */
+.ne_button:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%, 
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0) 70% 
+  );
+  top: 0;
+  left: -100px;
+  animation: shine 1.8s infinite linear; 
+}
+
+/* Ключевые кадры для анимации блика */
+@keyframes shine {
+  0% {
+    left: -100px; /* Начальная позиция блика (левая сторона кнопки) */
+  }
+  20% {
+    left: 100%; /* Позиция блика в конце (правая сторона кнопки) */
+  }
+  100% {
+    left: 100%; /* Завершение анимации */
+  }
+}
+
+
+
